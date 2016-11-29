@@ -5,22 +5,12 @@
 This library supports Floating Action Button transformation in [Material Design Guideline](https://www.google.com/design/spec/components/buttons-floating-action-button.html).
 
 # Screenshot
-![Demo1](art/transform_to_toolbar.gif)
-![Demo2](art/transform_to_sheet.gif)
-
-# Sample App
-<a href="https://play.google.com/store/apps/details?id=com.konifar.example.fabtransformation">
-  <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
-</a>
+![Demo1](art/show_1.gif)
+![Demo2](art/show_3.gif)
 
 # Installation
-Add the dependency (jcenter) to your `build.gradle`.
-```groovy
-dependencies {
-    compile 'konifar:fab-transformation:1.0.0'
-}
-```
+
+
 
 # How to use
 This is footer toolbar transformation example.
@@ -109,6 +99,9 @@ This library use following libraries.
 
 # Developed By
 Yusuke Konishi (konifar) - <yahpeycoy0403@gmail.com>
+
+# Fix By
+Juhezi - <juhezix@163.com>
 
 # License
 ```
