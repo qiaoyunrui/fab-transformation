@@ -7,7 +7,7 @@ This library supports Floating Action Button transformation in [Material Design 
 
 # Installation
 
-
+[![](https://jitpack.io/v/qiaoyunrui/fab-transformation.svg)](https://jitpack.io/#qiaoyunrui/fab-transformation)
 
 # How to use
 This is footer toolbar transformation example.
