@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.os.Build;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 
@@ -14,8 +15,8 @@ public class FabAnimatorLollipop extends FabAnimator {
     final void revealOff(final View fab, final View transformView, final RevealCallback callback) {
         Animator animator = ViewAnimationUtils.createCircularReveal(
                 transformView,
-                getCenterX(fab, transformView),
-                getCenterY(fab, transformView),
+                getCenterX(transformView),
+                getCenterY(transformView),
                 (float) Math.hypot(transformView.getWidth(), transformView.getHeight()) / 2,
                 fab.getWidth() / 2);
         animator.setInterpolator(REVEAL_INTERPOLATOR);
@@ -52,8 +53,8 @@ public class FabAnimatorLollipop extends FabAnimator {
     final void revealOn(final View fab, View transformView, final RevealCallback callback) {
         Animator animator = ViewAnimationUtils.createCircularReveal(
                 transformView,
-                getCenterX(fab, transformView),
-                getCenterY(fab, transformView),
+                getCenterX(transformView),
+                getCenterY(transformView),
                 fab.getWidth() / 2,
                 (float) Math.hypot(transformView.getWidth(), transformView.getHeight()) / 2);
         transformView.setVisibility(View.VISIBLE);
@@ -71,7 +72,7 @@ public class FabAnimatorLollipop extends FabAnimator {
 
             @Override
             public void onAnimationCancel(Animator animation) {
-                //
+
             }
 
             @Override
@@ -86,6 +87,13 @@ public class FabAnimatorLollipop extends FabAnimator {
         }
     }
 
+    /**
+     * 位移回原处
+     *
+     * @param fab
+     * @param transformView
+     * @param callback
+     */
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     final void fabMoveOut(final View fab, final View transformView, final FabAnimationCallback callback) {
@@ -120,6 +128,15 @@ public class FabAnimatorLollipop extends FabAnimator {
                 .start();
     }
 
+    private static final String TAG = "FabAnimatorLollipop";
+
+    /**
+     * 位移到目标地址
+     *
+     * @param fab
+     * @param transformView
+     * @param callback
+     */
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     final void fabMoveIn(final View fab, View transformView, final FabAnimationCallback callback) {
