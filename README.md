@@ -5,8 +5,8 @@
 This library supports Floating Action Button transformation in [Material Design Guideline](https://www.google.com/design/spec/components/buttons-floating-action-button.html).
 
 # Screenshot
-![Demo1](art/show_1.gif)
-![Demo2](art/show_3.gif)
+![Demo1](gif/show_1.gif)
+![Demo2](gif/show_3.gif)
 
 # Installation
 
